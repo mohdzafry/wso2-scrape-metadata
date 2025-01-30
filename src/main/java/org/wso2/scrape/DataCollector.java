@@ -13,7 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Collects system and product details such as OS, JDK, WSO2 product, OpenSSH, OpenSSL, and Kubernetes details.
+ * Collects system and product details such as OS, JDK, WSO2 product, and Kubernetes details.
  */
 public class DataCollector {
 

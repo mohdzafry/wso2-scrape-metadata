@@ -41,13 +41,23 @@ public class APIClient {
     /**
      * Sends collected data to the API.
      *
-     * @param osDetails            OS details.
-     * @param jdkDetails           JDK details.
-     * @param wso2ProductDetails   WSO2 product details.
-     * @param kubernetesDetails    Kubernetes details.
-     * @param clientId             Client ID for OAuth.
-     * @param clientSecret         Client secret for OAuth.
+     * @param dataCollector        Instance of {@link DataCollector} to determine the environment.
+     * @param apiUrl               The API endpoint URL where data is sent.
+     * @param applicationStartTime The timestamp when the application started.
+     * @param osDetails            A map containing OS details such as name and version.
+     * @param jdkDetails           A map containing JDK details, including the version.
+     * @param wso2ProductDetails   A map containing WSO2 product details, including version and update level.
+     * @param libraryVersions      A map of library names and their corresponding versions.
+     * @param kubernetesDetails    A map containing Kubernetes details such as master and node pool versions.
+     * @param environmentType      The type of environment (e.g., Dev, QA, Production).
+     * @param projectNumber        The project number associated with the deployment.
+     * @param hostname             The hostname of the server or instance.
+     * @param ipAddress            The IP address of the server or instance.
+     * @param clientId             The client ID used for OAuth authentication.
+     * @param clientSecret         The client secret used for OAuth authentication.
+     * @param tokenUrl             The URL to obtain the OAuth token.
      */
+
     public void sendDataToAPI(DataCollector dataCollector,String apiUrl, String applicationStartTime, Map<String, String> osDetails, Map<String, String> jdkDetails, Map<String, String> wso2ProductDetails, Map<String, String> libraryVersions, Map<String, String> kubernetesDetails, String environmentType, String projectNumber, String hostname, String ipAddress, String clientId, String clientSecret, String tokenUrl) {
         try {
             // Fetch the OAuth token

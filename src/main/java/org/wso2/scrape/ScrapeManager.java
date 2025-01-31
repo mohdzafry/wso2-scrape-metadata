@@ -112,7 +112,7 @@ public class ScrapeManager {
         try (FileInputStream input = new FileInputStream(carbonHome + "/scrape/scrape_config.properties")) {
             properties.load(input);
         }
-        String keystoreAlias = properties.getProperty("keystore.alias", "wso2carbon"); // Default to "wso2carbon" if not found
+        String keystoreAlias = properties.getProperty("keystore.alias", "wso2carbon");
 
         // Read the keystore password from the password-tmp file
         String keystorePassword = readKeystorePassword(carbonHome + "/password-tmp");
